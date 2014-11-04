@@ -3,6 +3,11 @@ Meteor.methods({
         this.unblock();
         var response = HTTP.call('POST', 'https://www.tradingview.com/accounts/signin/', {params: {username: username, password: password}});
 
+        var body = JSON.parse(response.content);
+
+        if (body.error)
+            throw new Meteor.Error(0, body.error);
+
         var cookies = response.headers['set-cookie'];
         var qparams = {};
 
