@@ -1,6 +1,6 @@
 Template.chat.helpers({
     messages: function() {
-        return Messages.find({}, {sort: {time: -1, limit: 30}});
+        return Messages.find({}, {sort: {time: -1}, limit: 100});
     },
     chartAttached: function() {
         return this.meta.type == 'snapshot';
@@ -70,10 +70,12 @@ Template.chat.events({
     },
     'click .username': function(e) {
         if ($('#message').val() != '') {
-            $('#message').val($('#message').val() + ' @' + $(e.target).html());
+            $('#message').val($('#message').val() + ' @' + $(e.target).html() + ' ');
         }
         else {
-            $('#message').val('@' + $(e.target).html());
+            $('#message').val('@' + $(e.target).html() + ' ');
         }
+
+        $('#message').focus();
     }
 });
