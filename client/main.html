@@ -1,0 +1,18 @@
+<head>
+  <title>TradingView Chat</title>
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+  {{> layout}}
+</body>
+
+<template name="layout">
+  <div class="container">
+    {{#if loggedIn}}
+      {{> chat}}
+    {{else}}
+      {{> login}}
+    {{/if}}
+  </div>
+</template>

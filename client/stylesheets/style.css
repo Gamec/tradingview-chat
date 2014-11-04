@@ -1,0 +1,17 @@
+.conversation-wrap {
+    padding: 10px;
+    box-shadow: 0 0 4px #ddd;
+}
+
+.conversation-wrap form {
+    margin-bottom: 10px;
+}
+
+.conversation-wrap .conversation {
+    margin-top: 5px;
+    padding-top: 10px;
+}
+
+.conversation-wrap .conversation:nth-child(2n) {
+    background: #fafafa;
+}

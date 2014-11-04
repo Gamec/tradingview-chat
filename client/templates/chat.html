@@ -1,0 +1,26 @@
+<template name="chat">
+  <div class="row">
+    <div class="conversation-wrap">
+      <form role="form">
+        <div class="form-group">
+          <input type="text" name="message" class="form-control" placeholder="Your message" id="message">
+        </div>
+      </form>
+      {{#each messages}}
+        <div class="media conversation">
+          <a class="pull-left" href="#">
+            <img class="media-object" style="width: 39px; height: 39px;" src="{{user_pic}}">
+          </a>
+          
+          <div class="media-body">
+            <h6 class="media-heading"><a href="#" class="username">{{username}}</a> <small>{{time}}</small></h6>
+            <p>{{text}}</p>
+            {{#if chartAttached}}
+              <a href="{{meta.url}}"><img src="{{meta.preview_url}}" alt="Chart"></a>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</template>
