@@ -5,6 +5,9 @@ Template.chat.helpers({
     chartAttached: function() {
         return this.meta.type == 'snapshot';
     },
+    formattedText: function() {
+        return this.text.autoLink();
+    },
     loggedIn: function() {
         return Boolean(Session.get('cookies'));
     }
