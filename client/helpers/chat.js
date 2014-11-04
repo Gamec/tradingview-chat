@@ -6,7 +6,32 @@ Template.chat.helpers({
         return this.meta.type == 'snapshot';
     },
     formattedText: function() {
-        return this.text.autoLink();
+        text = this.text;
+
+        text = text.replace(/:sell:/g, '<span class="emoticon emoticon-sell"></span>');
+        text = text.replace(/:buy:/g, '<span class="emoticon emoticon-buy"></span>');
+        text = text.replace(/:agree:/g, '<span class="emoticon emoticon-agree"></span>');
+        text = text.replace(/:disagree:/g, '<span class="emoticon emoticon-disagree"></span>');
+        text = text.replace(/:loss:/g, '<span class="emoticon emoticon-loss"></span>');
+        text = text.replace(/:profit:/g, '<span class="emoticon emoticon-profit"></span>');
+        text = text.replace(/:\)/g, '<span class="emoticon emoticon-smile"></span>');
+        text = text.replace(/:D/g, '<span class="emoticon emoticon-bigsmile"></span>');
+        text = text.replace(/;\)/g, '<span class="emoticon emoticon-wink"></span>');
+        text = text.replace(/:\(/g, '<span class="emoticon emoticon-sad"></span>');
+        text = text.replace(/o_O/g, '<span class="emoticon emoticon-eyes"></span>');
+        text = text.replace(/:\|/g, '<span class="emoticon emoticon-wtf"></span>');
+        text = text.replace(/:uptrend:/g, '<span class="emoticon emoticon-uptrend"></span>');
+        text = text.replace(/:downtrend:/g, '<span class="emoticon emoticon-downtrend"></span>');
+        text = text.replace(/:dollar:/g, '<span class="emoticon emoticon-dollar"></span>');
+        text = text.replace(/:yen:/g, '<span class="emoticon emoticon-yen"></span>');
+        text = text.replace(/:euro:/g, '<span class="emoticon emoticon-euro"></span>');
+        text = text.replace(/:pound:/g, '<span class="emoticon emoticon-pound"></span>');
+        text = text.replace(/:bitcoin:/g, '<span class="emoticon emoticon-bitcoin"></span>');
+        text = text.replace(/:bear:/g, '<span class="emoticon emoticon-bear"></span>');
+        text = text.replace(/:bull:/g, '<span class="emoticon emoticon-bull"></span>');
+        text = text.replace(/]:-\)/g, '<span class="emoticon emoticon-devil"></span>');
+
+        return text.autoLink();
     },
     loggedIn: function() {
         return Boolean(Session.get('cookies'));

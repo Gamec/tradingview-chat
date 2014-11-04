@@ -15,3 +15,95 @@
 .conversation-wrap .conversation:nth-child(2n) {
     background: #fafafa;
 }
+
+.emoticon {
+    background: url('/static/images/emoticons.png');
+    display: inline-block;
+    width: 20px;
+    height: 17px;
+    vertical-align: bottom;
+}
+
+.emoticon-buy {
+    background-position: -25px -0px;
+}
+
+.emoticon-agree {
+    background-position: -50px -0px;
+}
+
+.emoticon-disagree {
+    background-position: -75px -0px;
+}
+
+.emoticon-loss {
+    background-position: -100px -0px;
+}
+
+.emoticon-profit {
+    background-position: -125px -0px;
+}
+
+.emoticon-smile {
+    background-position: -0px -25px;
+}
+
+.emoticon-bigsmile {
+    background-position: -25px -25px;
+}
+
+.emoticon-wink {
+    background-position: -50px -25px;
+}
+
+.emoticon-sad {
+    background-position: -75px -25px;
+}
+
+.emoticon-eyes {
+    background-position: -100px -25px;
+}
+
+.emoticon-wtf {
+    background-position: -125px -25px;
+}
+
+.emoticon-uptrend {
+    background-position: -0px -50px;
+}
+
+.emoticon-downtrend {
+    background-position: -25px -50px;
+}
+
+.emoticon-dollar {
+    background-position: -50px -50px;
+}
+
+.emoticon-yen {
+    background-position: -75px -50px;
+}
+
+.emoticon-euro {
+    background-position: -100px -50px;
+}
+
+.emoticon-pound {
+    background-position: -125px -50px;
+}
+
+.emoticon-bitcoin {
+    background-position: -0px -75px;
+}
+
+.emoticon-bear {
+    background-position: -25px -75px;
+}
+
+.emoticon-bull {
+    background-position: -50px -75px;
+}
+
+.emoticon-devil {
+    background-position: -75px -75px;
+}
