@@ -1,4 +1,4 @@
-var WebSocket = Npm.require('ws');
+var WebSocket = Meteor.npmRequire('ws');
 
 var ws = new WebSocket('ws://tradingview.com/message-pipe-ws/public/');
 

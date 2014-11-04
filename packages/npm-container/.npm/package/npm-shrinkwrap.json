@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "ws": {
+      "version": "http://registry.npmjs.org/ws/-/ws-0.4.32.tgz",
+      "dependencies": {
+        "commander": {
+          "version": "http://registry.npmjs.org/commander/-/commander-2.1.0.tgz"
+        },
+        "nan": {
+          "version": "http://registry.npmjs.org/nan/-/nan-1.0.0.tgz"
+        },
+        "tinycolor": {
+          "version": "http://registry.npmjs.org/tinycolor/-/tinycolor-0.0.1.tgz"
+        },
+        "options": {
+          "version": "http://registry.npmjs.org/options/-/options-0.0.6.tgz"
+        }
+      }
+    }
+  }
+}
