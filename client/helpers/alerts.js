@@ -8,17 +8,17 @@ Template.errors.helpers({
 });
 
 Template.error.rendered = function() {
-  var error = this.data;
-  Meteor.setTimeout(function () {
-    Errors.remove(error._id);
-  }, 5000);
+    var error = this.data;
+    Meteor.setTimeout(function () {
+        Errors.remove(error._id);
+    }, 5000);
 };
 
 Template.notification.rendered = function() {
-  var notification = this.data;
-  Meteor.setTimeout(function () {
-    Notifications.remove(notification._id);
-  }, 5000);
+    var notification = this.data;
+    Meteor.setTimeout(function () {
+        Notifications.remove(notification._id);
+    }, 5000);
 };
 
 throwError = function(message) {

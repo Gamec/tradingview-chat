@@ -5,6 +5,10 @@ Template.chat.helpers({
     chartAttached: function() {
         return this.meta.type == 'snapshot';
     },
+    formattedDate: function() {
+        var dateObj = new Date(this.time);
+        return dateObj.format('m-d H:i:s');
+    },
     formattedText: function() {
         text = this.text;
 
@@ -52,6 +56,7 @@ Template.chat.events({
             }
 
             Session.set('cookies', result);
+            Session.set('username', username);
         });
     },
     'submit #send-message': function(e) {
