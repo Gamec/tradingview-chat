@@ -26,7 +26,7 @@ Meteor.methods({
     sendMessage: function(text, cookies) {
         var params = {
             text: text, 
-            room: 'qHo9VLefohcj3DnI', 
+            room: 'bitcoin', 
             symbol: 'FROM:Botland', 
             meta: '{}'
         }
