@@ -7,14 +7,18 @@
     margin-bottom: 10px;
 }
 
-.conversation-wrap .conversation {
+.conversation {
     margin-top: 5px;
     padding-top: 10px;
     word-wrap: break-word;
 }
 
-.conversation-wrap .conversation:nth-child(2n) {
+.conversation:nth-child(2n) {
     background: #fafafa;
+}
+
+.conversation .media-body {
+    word-break: break-all;
 }
 
 .emoticon {

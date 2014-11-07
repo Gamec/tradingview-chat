@@ -36,7 +36,6 @@ Template.chat.helpers({
         text = text.replace(/]:-\)/g, '<span class="emoticon emoticon-devil"></span>');
 
         text = text.autoLink();
-
         text = text.replace(/(?:^|\W)@(\w+)(?!\w)/g, '<a href="https://www.tradingview.com/u/\\$1/" target="_blank">@\$1</a>');
 
         return text;
