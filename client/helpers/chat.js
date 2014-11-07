@@ -35,7 +35,11 @@ Template.chat.helpers({
         text = text.replace(/:bull:/g, '<span class="emoticon emoticon-bull"></span>');
         text = text.replace(/]:-\)/g, '<span class="emoticon emoticon-devil"></span>');
 
-        return text.autoLink();
+        text = text.autoLink();
+
+        text = text.replace(/(?:^|\W)@(\w+)(?!\w)/g, '<a href="https://www.tradingview.com/u/\\$1/" target="_blank">@\$1</a>');
+
+        return text;
     },
     loggedIn: function() {
         return Boolean(Session.get('cookies'));
